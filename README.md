@@ -53,6 +53,7 @@ create table if not exists gold_investors (
     session_id text not null,
     name text not null,
     phone text not null,
+    amount numeric not null,
     created_at timestamp with time zone default now()
 );
 
