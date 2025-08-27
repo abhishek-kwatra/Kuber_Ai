@@ -26,7 +26,7 @@ GOLD_FACTS = [
     "Gold can be volatile short-term; consider medium-to-long-term horizon for preservation."
 ]
 
-GROK_API_KEY = os.getenv("GROK_API_KEY")
+GROK_API_KEY = os.getenv(GROK_API_KEY)
 
 
 # Initialize model
