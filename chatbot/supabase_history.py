@@ -41,15 +41,27 @@ class SupabaseChatHistory(BaseChatMessageHistory):
     def clear(self):
         supabase.table("chat_history").delete().eq("session_id", self.session_id).execute()
         
-    def add_investment(self, name: str, phone: str):
+    def add_investment(self, name: str, phone: str, amount: float):
         # Adds an investment record to the gold_investors table.
         data = {
             "session_id": self.session_id,
             "name": name,
             "phone": phone,
+            "amount": amount,
             "created_at": datetime.utcnow().isoformat()
         }
         supabase.table("gold_investors").insert(data).execute() 
-        
+    
+    def get_investments(self):
+        """Fetch all previous investments for this session."""
+        response = supabase.table("gold_investors")\
+            .select("*")\
+            .eq("session_id", self.session_id)\
+            .order("created_at", desc=True)\
+            .execute()
+        if response.data:
+            return response.data
+        return []
+    
     def clear(self):
         supabase.table("chat_history").delete().eq("session_id", self.session_id).execute()
