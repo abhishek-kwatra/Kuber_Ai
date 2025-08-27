@@ -1,0 +1,80 @@
+#Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# PYTHON
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.log
+*.pot
+*.mo
+
+# Bytecode cache
+.pytest_cache/
+.cache/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Python virtual environments
+venv/
+ENV/
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+
+# IDEs / EDITORS
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+
+# ENVIRONMENT FILES
+.env
+.env.*
+*.env
+
+# OTHER
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+*.db
+
+# If using Docker
+.dockerignore
+Dockerfile
+docker-compose.override.yml
+
+# If using Git patches
+*.patch
