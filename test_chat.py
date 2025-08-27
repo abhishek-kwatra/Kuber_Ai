@@ -6,7 +6,7 @@ from langchain_groq import ChatGroq
 # Load environment variables
 load_dotenv()
 
-GROK_API_KEY = os.getenv("GROK_API_KEY")
+GROK_API_KEY = os.getenv(GROK_API_KEY)
 
 # Initialize LLM (GROK API via OpenAI wrapper if supported)
 llm = ChatGroq(model="Gemma2-9b-It", api_key=GROK_API_KEY)
