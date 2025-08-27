@@ -35,7 +35,7 @@ SUPABASE_KEY=<your-supabase-key>
 GROK_API_KEY=<your-groq-api-key> 
 
 ### Execute the following queries in Supabase(PostgreSQL) SQL editor to set up the database schema:
-### --For saving the message history
+### For saving the message history
 create table if not exists chat_history (
   id uuid primary key default gen_random_uuid(),
   session_id text not null,
